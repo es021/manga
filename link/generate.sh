@@ -8,19 +8,15 @@ EPS="${EPS} 113"
 # for i in {828..869} // belum
 main(){
 
-    for i in {828..869}
+    for i in {1..869}
     do
         echo ""
         echo "..................."
         echo "Loading $i ..."
         echo ""
-        curl w12.holymanga.net/one-piece-digital-colored-comics-chap-${i}/ | grep "<img src=\"https:/" > ${i}.txt
+        mv ${i}.txt ${i}.js
+        # curl w12.holymanga.net/one-piece-digital-colored-comics-chap-${i}/ | grep "<img src=\"https:/" > ${i}.js
     done
-    
-    # for E in ${EPS}; do {
-    #     LINK=episode-${E}
-    #     curl w12.holymanga.net/one-piece-digital-colored-comics-chap-${E}/ | grep "<img src=\"http:/" > ${E}.txt
-    # } done
 }
 
 main
